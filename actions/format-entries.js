@@ -7,11 +7,11 @@ function main(params) {
   // params contain the "rows" coming from Cloudant including the full documents
   return {
     entries: params.rows.map((row) => { return {
-      name: row.doc.name,
-	    email: row.doc.email,
-	    comment: row.doc.comment,
+      name: row.doc.nombre,
+	    email: row.doc.correo,
+	    comment: row.doc.comentario,
 	    createdAt: row.doc.createdAt,
-	    icon: (row.doc.email ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.email.trim().toLowerCase())}?s=64` : null)
+	    icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.email.trim().toLowerCase())}?s=64` : null)
     }})
 	};
 }
