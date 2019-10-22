@@ -2,16 +2,16 @@
  * Prepare the guestbook entry to be persisted
  */
 function main(params) {
-  if (!params.name || !params.comment) {
+  if (!params.nombre || !params.comentario) {
     return Promise.reject({error: 'no name or comment'});
   }
 
 	return {
     doc: {
       createdAt: new Date(),
-	    name: params.name,
-	    email: params.email,
-	    comment: params.comment,
+	    name: params.nombre,
+	    email: params.correo,
+	    comment: params.comentario,
 	  }
   };
 }
