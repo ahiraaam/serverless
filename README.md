@@ -20,7 +20,7 @@ Agenda
 
 
 
-0. Prework:
+## Prework:
 •	Cuenta de IBM Cloud (https://cloud.ibm.com/registration)
 •	Instalar cli de IBM Cloud https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli 
 •	Cuenta en github https://github.com/join
