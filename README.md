@@ -10,7 +10,7 @@ En lugar de suministrar una máquina virtual, un contenedor o un entorno de ejec
 Módulo: Serverless	
 Agenda
 * [Prework](#Prework)
-* [Crear y configurar Cloudant DB](*Crear y configurar Cloudant)
+* [Crear y configurar Cloudant DB](*Crear y configurar Cloudant DB)
 * [Configuración de Functions](*Configuración de Functions)
 * [Configuración de API](*Configuración de API)
 * [Despliegue de Aplicación](*Despliegue de Aplicación)
