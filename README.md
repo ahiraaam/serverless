@@ -10,21 +10,20 @@ En lugar de suministrar una máquina virtual, un contenedor o un entorno de ejec
 Módulo: Serverless	
 Agenda
 * [Prework](#Prework)
-2.	Crear y configurar Cloudant.........................................................................
-3.	Configuración de Functions.........................................................................
-4.	Configuración de API...................................................................................
-5.	Despliegue de Aplicación.............................................................................
-
+* [Crear y configurar Cloudant](*Crear y configurar Cloudant)
+* [Configuración de Functions](*Configuración de Functions)
+* [Configuración de API](*Configuración de API)
+* [Despliegue de Aplicación](*Despliegue de Aplicación)
 
 
 
 
 
 ## Prework:
-•	Cuenta de IBM Cloud (https://cloud.ibm.com/registration)
-•	Instalar cli de IBM Cloud https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli 
-•	Cuenta en github https://github.com/join
-•	Utilizar safari, chrome, firefox, edge
+* Cuenta de IBM Cloud (https://cloud.ibm.com/registration)
+* Instalar cli de IBM Cloud https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli 
+* Cuenta en github https://github.com/join
+* Utilizar safari, chrome, firefox, edge
 1.1 Cupones para Estudiantes y profesores
  
 1.	Acceder al HUB para Software para uso académico. Y navegar hasta la parte de abajo de la pagina https://onthehub.com/ibm/?utm_sourc=ibm-ai-productpage&utm_medium=onthehubproductpage&utm_campaign=IBM 
@@ -56,36 +55,28 @@ Agenda
 5.	Realizar el registro correspondiente utilizando la cuenta de correo académica 
  
 1.2 Cargar créditos en IBM Cloud
-1.	Ingresamos a nuestro panel de control de IBM Cloud (console.bluemix.net)
-2.	Una vez que tengamos el código nos vamos a Gestionar>Facturación y Uso>Facturación
-
-3.	Buscamos “Códigos de características (Promocionales)”
-
+	1.	Ingresamos a nuestro panel de control de IBM Cloud (console.bluemix.net)
+	2.	Una vez que tengamos el código nos vamos a Gestionar>Facturación y Uso>Facturación
+	3.	Buscamos “Códigos de características (Promocionales)”
 
 
-
-
-4.	
-2. Crear y configurar Cloudant DB
-1.	De nuestro catálogo en console.bluemix.net seleccionamos Cloudant
-2.	Buscamos Cloudant
+## Crear y configurar Cloudant DB
+	1.De nuestro catálogo en console.bluemix.net seleccionamos Cloudant
+	2.Buscamos Cloudant
  
-3.	Lo nombramos guestbook-db, seleccionamos Legacy Credentials y IAM, posteriormente creamos una instancia del servicio
+	3.Lo nombramos guestbook-db, seleccionamos Legacy Credentials y IAM, posteriormente creamos una instancia del servicio
+	4.Una vez que lo creamos dentro de nuestro servicio, le damos click en “Launch cloudant dashboard”
+	5.Nos vamos a la 3er tab de lado izquierdo, damos click en Create Database y la nombramos guestbook
  
- 
-4.	Una vez que lo creamos dentro de nuestro servicio, le damos click en “Launch cloudant dashboard”
-5.	Nos vamos a la 3er tab de lado izquierdo, damos click en Create Database y la nombramos guestbook
- 
-6.	Regresamos al servicio y en el tab de “Service Credentials” generamos una nueva credencial
+	6.Regresamos al servicio y en el tab de “Service Credentials” generamos una nueva credencial
  
 
-3. Configuración de Functions
+## Configuración de Functions
 En esta sección configuraremos nuestro servicio de Functions
 1.Secuencia de acciones para escribir a la base de datos
-1.Vamos al catálogo y buscamos Cloud Functions
- 
-2. Una vez dentro seleccionamos Actions
-3. Damos click en Create
+	1.Vamos al catálogo y buscamos Cloud Functions
+ 	2. Una vez dentro seleccionamos Actions
+	3. Damos click en Create
  
 5.	Damos click en Create action
  
@@ -179,7 +170,7 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 19.	}
 1.	Salvamos y damos click en invoke
  
-4. Configurar el API
+## Configurar el API
 1.	Dentro de nuestras acciones seleccionamos nuestras secuencias y en la tab de Endpoints damos click en Enable Web Action y damos click en Save
  
 2.	Nos vamos a Functions y damos click en APIs
@@ -192,7 +183,7 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 6.	Realizamos la misma acción pero ahora con un POST y la secuencia save-guestbook-entries-sequence y damos click en Create
 7.	Salvamos y exponemos la API
  
-5. Despliegue
+## Despliegue
 1.	Clonamos el siguiente repositorio en alguna carpeta:
 https://github.com/IBM-Cloud/serverless-guestbook
 2.	Modificamos el docs/guestbook.js y reemplazamos el valor de apiUrl con la ruta dada por API Gateway, que obtenemos al dar click en APIs
