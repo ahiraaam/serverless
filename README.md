@@ -60,7 +60,7 @@ Agenda
 	3.	Buscamos “Códigos de características (Promocionales)”
 
 
-## Crear y configurar Cloudant DB
+## Crear y configurar Cloudant DB:
 	1.De nuestro catálogo en console.bluemix.net seleccionamos Cloudant
 	2.Buscamos Cloudant
  
