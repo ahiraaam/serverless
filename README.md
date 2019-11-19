@@ -11,9 +11,9 @@ Módulo: Serverless
 Agenda
 * [Prework](#Prework)
 * [Crear y configurar Cloudant DB](#Crear-y-configurar-Cloudant-DB)
-* [Configuración de Functions](#Configuración de Functions)
-* [Configuración de API](#Configuración de API)
-* [Despliegue de Aplicación](#Despliegue de Aplicación)
+* [Configuración de Functions](#Configuración-de-Functions)
+* [Configuración de API](#Configuración-de-API)
+* [Despliegue de Aplicación](#Despliegue-de-Aplicación)
 
 
 
@@ -24,7 +24,8 @@ Agenda
 * Instalar cli de IBM Cloud https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli 
 * Cuenta en github https://github.com/join
 * Utilizar safari, chrome, firefox, edge
-1.1 Cupones para Estudiantes y profesores
+
+# Cupones para Estudiantes y profesores
  
 1.	Acceder al HUB para Software para uso académico. Y navegar hasta la parte de abajo de la pagina https://onthehub.com/ibm/?utm_sourc=ibm-ai-productpage&utm_medium=onthehubproductpage&utm_campaign=IBM 
 
