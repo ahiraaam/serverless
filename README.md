@@ -60,19 +60,19 @@ En esta sección configuraremos nuestro servicio de Functions.
 	5. Damos click en Create action
 	6. Ponemos el nombre prepare-entry-for-save y seleccionamos Node.js 6 como el Runtime, damos click en Create
 	7. Cambiamos el código por el siguiente:
-				function main(params) {
-			     if (!params.nombre || !params.comentario) {
-				  return Promise.reject({ error: 'no name or comment'});
-			      }
-			     return {
-			      doc: {
-			       createdAt: new Date(),
-			       name: params.nombre,
-			       email: params.correo,
-			       comment: params.comentario
-			       }
-			      };
-			     }
+		function main(params) {
+		if (!params.nombre || !params.comentario) {
+		return Promise.reject({ error: 'no name or comment'});
+		}
+		return {
+		doc: {
+		createdAt: new Date(),
+		name: params.nombre,
+		email: params.correo,
+		comment: params.comentario
+		}
+		};
+		}
 
 8.	Lo salvamos
 9.	Para añadir nuestra acción a una secuencia primero nos vamos al tab “Enclosing Secuences” y damos click en “Add to Sequence”
