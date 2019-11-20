@@ -60,58 +60,45 @@ En esta sección configuraremos nuestro servicio de Functions.
 	5. Damos click en Create action
 	6. Ponemos el nombre prepare-entry-for-save y seleccionamos Node.js 6 como el Runtime, damos click en Create
 	7. Cambiamos el código por el siguiente:
-		* function main(params) {
-		* if (!params.nombre || !params.comentario) {
-		* return Promise.reject({ error: 'no name or comment'});
-		* }
-		* return {
-		* doc: {
-		* createdAt: new Date(),
-		* name: params.nombre,
-		* email: params.correo,
-		* comment: params.comentario
-		* }
-		* };
-		* }
-
-8.	Lo salvamos
-9.	Para añadir nuestra acción a una secuencia primero nos vamos al tab “Enclosing Secuences” y damos click en “Add to Sequence”
+		function main(params) {
+		if (!params.nombre || !params.comentario) {
+		return Promise.reject({ error: 'no name or comment'});
+		}
+		return {
+		doc: {
+		createdAt: new Date(),
+		name: params.nombre,
+		email: params.correo,
+		comment: params.comentario
+		}
+		};
+	 	}
+	8. Lo salvamos
+	9. Para añadir nuestra acción a una secuencia primero nos vamos al tab “Enclosing Secuences” y damos click en “Add to Sequence”
+ 	10.	Para el nombre de la secuencia ponemos save-guestbook-entry-sequence y posteriormente damos click en Create and Add
+	11.	Una vez que esta creada nuestra secuencia le damos click y damos click en Add posteriormente
+ 	12.	Damos click en Use Public y seleccionamos Cloudant
+ 	13.	Seleccionamos la acción create-document, damos click en New Binding, ponemos de nombre de nuestro paquete binding-for-guestbook y en Cloudant Instance seleccionamos Input Your Own Credentials
+ 	14.	 Para llenar todos los datos posteriores copiamos lo que teníamos en el servicio de Cloudant como credenciales y damos click en Add:
+ 	15.	Para probar que esté funcionando, damos click en change input e ingresamos nuestro siguiente JSON y damos click en Apply y luego en Invoke
+		{
+		"nombre": "John Smith",
+		"correo": "john@smith.com",
+		"comentario": "this is my comment"
+		}
+	Una vez hecho esto podremos verlo escrito en nuestra base de datos de Cloudant en la sección Documents
  
-10.	Para el nombre de la secuencia ponemos save-guestbook-entry-sequence y posteriormente damos click en Create and Add
- 
-11.	Una vez que esta creada nuestra secuencia le damos click y damos click en Add posteriormente
- 
- 
-12.	Damos click en Use Public y seleccionamos Cloudant
- 
-13.	Seleccionamos la acción create-document, damos click en New Binding, ponemos de nombre de nuestro paquete binding-for-guestbook y en Cloudant Instance seleccionamos Input Your Own Credentials
- 
-14.	 Para llenar todos los datos posteriores copiamos lo que teníamos en el servicio de Cloudant como credenciales y damos click en Add:
- 
-15.	Para probar que esté funcionando, damos click en change input e ingresamos nuestro JSON y damos click en Apply y luego en Invoke
-2.	{
-3.	   "nombre": "John Smith",
-4.	   "correo": "john@smith.com",
-5.	   "comentario": "this is my comment"
-6.	 }
-
- 
-      
-      
-Una vez hecho esto podremos verlo escrito en nuestra base de datos de Cloudant en la sección Documents
- 
-	2.Secuencia de acciones para obtener las entradas de la base de datos
+2. Secuencia de acciones para obtener las entradas de la base de datos
 Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respectivos comentarios
-1.	En nuestra tab de functions creamos una acción Node.js y le ponemos el nombre set-read-input, siguiendo el mismo proceso que en la acción anterior
- 
-2.	Reemplazamos el código que viene, esta acción pasa los parámetros apropiados a nuestra siguiente acción
-3.	function main(params) {
-4.	  return {
-5.	    params: {
-6.	      include_docs: true
-7.	    }
-8.	  };
-9.	}
+	1.	En nuestra tab de functions creamos una acción Node.js y le ponemos el nombre set-read-input, siguiendo el mismo proceso que en la acción anterior
+	2.	Reemplazamos el código que viene, esta acción pasa los parámetros apropiados a nuestra siguiente acción
+	3.	function main(params) {
+	4.	  return {
+	5.	    params: {
+	6.	      include_docs: true
+	7.	    }
+	8.	  };
+	9.	}
 
  
 3. Damos click en Save 
