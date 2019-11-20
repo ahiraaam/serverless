@@ -25,37 +25,16 @@ Agenda
 * Cuenta en github https://github.com/join
 * Utilizar safari, chrome, firefox, edge
 
-# Cupones para Estudiantes y profesores
+### Cupones para Estudiantes y profesores
  
+
 1.	Acceder al HUB para Software para uso académico. Y navegar hasta la parte de abajo de la pagina https://onthehub.com/ibm/?utm_sourc=ibm-ai-productpage&utm_medium=onthehubproductpage&utm_campaign=IBM 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 2.	Buscar el WebStore del instituto/escuela al que perteneces. 
 3.	En caso de no contar con WebStore, acceder al portal de IBM Academic Initiative y seleccionar la opción de <Students> 
- 
-
-
-
-
-
- 
 4.	Seleccionar <Add to Cart> para IBM Bluemix – 6 Month Trial. 
- 
 5.	Realizar el registro correspondiente utilizando la cuenta de correo académica 
  
-1.2 Cargar créditos en IBM Cloud
+### Cargar créditos en IBM Cloud
 	1.	Ingresamos a nuestro panel de control de IBM Cloud (console.bluemix.net)
 	2.	Una vez que tengamos el código nos vamos a Gestionar>Facturación y Uso>Facturación
 	3.	Buscamos “Códigos de características (Promocionales)”
