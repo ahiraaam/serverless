@@ -60,6 +60,7 @@ En esta sección configuraremos nuestro servicio de Functions.
 	5. Damos click en Create action
 	6. Ponemos el nombre prepare-entry-for-save y seleccionamos Node.js 6 como el Runtime, damos click en Create
 	7. Cambiamos el código por el siguiente:
+		``` js
 		function main(params) {
 		if (!params.nombre || !params.comentario) {
 		return Promise.reject({ error: 'no name or comment'});
@@ -73,6 +74,7 @@ En esta sección configuraremos nuestro servicio de Functions.
 		}
 		};
 	 	}
+		```
 	8. Lo salvamos
 	9. Para añadir nuestra acción a una secuencia primero nos vamos al tab “Enclosing Secuences” y damos click en “Add to Sequence”
  	10.	Para el nombre de la secuencia ponemos save-guestbook-entry-sequence y posteriormente damos click en Create and Add
