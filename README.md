@@ -52,33 +52,29 @@ Agenda
  
 
 ## Configuración de Functions
-En esta sección configuraremos nuestro servicio de Functions
-1.Secuencia de acciones para escribir a la base de datos
+En esta sección configuraremos nuestro servicio de Functions.
+1. Secuencia de acciones para escribir a la base de datos
 	1.Vamos al catálogo y buscamos Cloud Functions
  	2. Una vez dentro seleccionamos Actions
 	3. Damos click en Create
- 
-5.	Damos click en Create action
- 
-6.	Ponemos el nombre prepare-entry-for-save y seleccionamos Node.js 6 como el Runtime, damos click en Create
- 
-7.	Cambiamos el código por el siguiente:
-2.	function main(params) {
-3.	  if (!params.nombre || !params.comentario) {
-4.	    return Promise.reject({ error: 'no name or comment'});
-5.	  }
-6.	
-7.	  return {
-8.	    doc: {
-9.	      createdAt: new Date(),
-10.	       name: params.nombre,
-11.	       email: params.correo,
-12.	       comment: params.comentario
-13.	    }
-14.	  };
-15.	}
-7.	Viéndose de esta forma:
- 
+	5.	Damos click en Create action
+	6.	Ponemos el nombre prepare-entry-for-save y seleccionamos Node.js 6 como el Runtime, damos click en Create
+	7.	Cambiamos el código por el siguiente:
+			function main(params) {
+			  if (!params.nombre || !params.comentario) {
+			    return Promise.reject({ error: 'no name or comment'});
+			  }
+			
+			  return {
+			    doc: {
+			      createdAt: new Date(),
+			       name: params.nombre,
+			       email: params.correo,
+			       comment: params.comentario
+			    }
+			  };
+			}
+
 8.	Lo salvamos
 9.	Para añadir nuestra acción a una secuencia primero nos vamos al tab “Enclosing Secuences” y damos click en “Add to Sequence”
  
