@@ -83,11 +83,13 @@ En esta sección configuraremos nuestro servicio de Functions.
  	13.	Seleccionamos la acción create-document, damos click en New Binding, ponemos de nombre de nuestro paquete binding-for-guestbook y en Cloudant Instance seleccionamos Input Your Own Credentials
  	14.	 Para llenar todos los datos posteriores copiamos lo que teníamos en el servicio de Cloudant como credenciales y damos click en Add:
  	15.	Para probar que esté funcionando, damos click en change input e ingresamos nuestro siguiente JSON y damos click en Apply y luego en Invoke
+	 ```json
 		{
 		"nombre": "John Smith",
 		"correo": "john@smith.com",
 		"comentario": "this is my comment"
 		}
+	```
 	Una vez hecho esto podremos verlo escrito en nuestra base de datos de Cloudant en la sección Documents
  
 2. Secuencia de acciones para obtener las entradas de la base de datos
