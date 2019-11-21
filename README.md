@@ -96,44 +96,39 @@ En esta sección configuraremos nuestro servicio de Functions.
 Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respectivos comentarios
 	1.	En nuestra tab de functions creamos una acción Node.js y le ponemos el nombre set-read-input, siguiendo el mismo proceso que en la acción anterior
 	2.	Reemplazamos el código que viene, esta acción pasa los parámetros apropiados a nuestra siguiente acción
-	3.	function main(params) {
-	4.	  return {
-	5.	    params: {
-	6.	      include_docs: true
-	7.	    }
-	8.	  };
-	9.	}
-
- 
-3. Damos click en Save 
-4. Damos click en Enclosing Sequences, Add to Sequence y Create New con el nombre read-guestbook-entries-sequence damos click en Create and Add
-
- 
- 
-5. Damos click en Actions y  damos click en read-guestbook-entries-sequence
- 
-10.	Damos click en Add para crear una segunda acción en la secuencia
-11.	Seleccionamos Public y Cloudant
- 
-12.	Seleccionamos list-documents en actions y seleccionamos el binding binding-for-guestbook y posteriormente damos click en Add
- 
-13.	Damos click en Add para añadir una acción más a la secuencia, esta es la que va a dar el formato de los documentos cuando regresen de Cloudant
-14.	La nombraremos format-entries y posteriormente damos click en Create and add 
- 
-15.	Damos click en format-entries y reemplazamos el código con:
-7.	const md5 = require('spark-md5');
-8.	
-9.	function main(params) {
-10.	  return {
-11.	    entries: params.rows.map((row) => { return {
-12.	      name: row.doc.nombre,
-13.	      email: row.doc.correo,
-14.	      comment: row.doc.comentario,
-15.	      createdAt: row.doc.createdAt,
-16.	      icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.email.trim().toLowerCase())}?s=64` : null)
-17.	    }})
-18.	  };
-19.	}
+		```js
+		function main(params) {
+		return {
+		params: {
+		include_docs: true
+		}
+		};
+		}
+		```
+	3. Damos click en Save 
+	4. Damos click en Enclosing Sequences, Add to Sequence y Create New con el nombre read-guestbook-entries-sequence damos click en Create and Add
+	5. Damos click en Actions y  damos click en read-guestbook-entries-sequence
+ 	6. Damos click en Add para crear una segunda acción en la secuencia
+	7. Seleccionamos Public y Cloudant
+ 	8.	Seleccionamos list-documents en actions y seleccionamos el binding binding-for-guestbook y posteriormente damos click en Add
+ 	9.	Damos click en Add para añadir una acción más a la secuencia, esta es la que va a dar el formato de los documentos cuando regresen de Cloudant
+	10.	La nombraremos format-entries y posteriormente damos click en Create and add 
+	11.	Damos click en format-entries y reemplazamos el código con:
+		```JS
+		const md5 = require('spark-md5');
+			
+		function main(params) {
+		 return {
+		  entries: params.rows.map((row) => { return {
+		   name: row.doc.nombre,
+		   email: row.doc.correo,
+		   comment: row.doc.comentario,
+		   createdAt: row.doc.createdAt,
+		   icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.email.trim().toLowerCase())}?s=64` : null)
+		  }})
+		 };
+		}
+		```
 1.	Salvamos y damos click en invoke
  
 ## Configurar el API
