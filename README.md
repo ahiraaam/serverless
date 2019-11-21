@@ -12,8 +12,8 @@ Agenda
 * [Prework](#Prework)
 * [Crear y configurar Cloudant DB](#Crear-y-configurar-Cloudant-DB)
 * [Configuración de Functions](#Configuración-de-Functions)
-* [Configuración de API](#Configuración-de-API)
-* [Despliegue de Aplicación](#Despliegue-de-Aplicación)
+* [Configuración de API](#Configurar-el-API)
+* [Despliegue de Aplicación](#Despliegue)
 
 
 
