@@ -62,17 +62,17 @@ En esta sección configuraremos nuestro servicio de Functions.
 	7. Cambiamos el código por el siguiente:
 		``` js
 		function main(params) {
-		if (!params.nombre || !params.comentario) {
-		return Promise.reject({ error: 'no name or comment'});
-		}
-		return {
-		doc: {
-		createdAt: new Date(),
-		name: params.nombre,
-		email: params.correo,
-		comment: params.comentario
-		}
-		};
+		 if (!params.nombre || !params.comentario) {
+		  return Promise.reject({ error: 'no name or comment'});
+		  }
+		 return {
+		  doc: {
+		   createdAt: new Date(),
+		   name: params.nombre,
+		   email: params.correo,
+		   comment: params.comentario
+		  }
+		 };
 	 	}
 		```
 	8. Lo salvamos
@@ -98,11 +98,11 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 	2.	Reemplazamos el código que viene, esta acción pasa los parámetros apropiados a nuestra siguiente acción
 		```js
 		function main(params) {
-		return {
-		params: {
-		include_docs: true
-		}
-		};
+		 return {
+		  params: {
+		   include_docs: true
+		   }
+		 };
 		}
 		```
 	3. Damos click en Save 
@@ -129,7 +129,7 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 		 };
 		}
 		```
-1.	Salvamos y damos click en invoke
+	12.	Salvamos y damos click en invoke
  
 ## Configurar el API
 1.	Dentro de nuestras acciones seleccionamos nuestras secuencias y en la tab de Endpoints damos click en Enable Web Action y damos click en Save
