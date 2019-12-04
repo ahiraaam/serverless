@@ -11,7 +11,7 @@ function main(params) {
 	    email: row.doc.correo,
 	    comment: row.doc.comentario,
 	    createdAt: row.doc.createdAt,
-	    icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.email.trim().toLowerCase())}?s=64` : null)
+	    icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.correo.trim().toLowerCase())}?s=64` : null)
     }})
 	};
 }

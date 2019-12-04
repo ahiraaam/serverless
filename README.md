@@ -63,14 +63,14 @@ En esta sección configuraremos nuestro servicio de Functions.
 		``` js
 		function main(params) {
 		 if (!params.nombre || !params.comentario) {
-		  return Promise.reject({ error: 'no name or comment'});
+		  return Promise.reject({ error: 'no nombre or comentario'});
 		  }
 		 return {
 		  doc: {
 		   createdAt: new Date(),
-		   name: params.nombre,
-		   email: params.correo,
-		   comment: params.comentario
+		   nombre: params.nombre,
+		   correo: params.correo,
+		   comentario: params.comentario
 		  }
 		 };
 	 	}
@@ -120,11 +120,11 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 		function main(params) {
 		 return {
 		  entries: params.rows.map((row) => { return {
-		   name: row.doc.nombre,
-		   email: row.doc.correo,
-		   comment: row.doc.comentario,
+		   nombre: row.doc.nombre,
+		   correo: row.doc.correo,
+		   comentario: row.doc.comentario,
 		   createdAt: row.doc.createdAt,
-		   icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.email.trim().toLowerCase())}?s=64` : null)
+		   icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.comentario.trim().toLowerCase())}?s=64` : null)
 		  }})
 		 };
 		}
@@ -145,8 +145,7 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 7.	Salvamos y exponemos la API
  
 ## Despliegue
-1.	Clonamos el siguiente repositorio en alguna carpeta:
-https://github.com/IBM-Cloud/serverless-guestbook
+1.	Clonamos este repositorio en alguna carpeta de facil acceso
 2.	Modificamos el docs/guestbook.js y reemplazamos el valor de apiUrl con la ruta dada por API Gateway, que obtenemos al dar click en APIs
  
 3.	Hacemos push de esto a un nuevo repositorio

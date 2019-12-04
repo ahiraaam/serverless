@@ -3,7 +3,7 @@
  */
 function main(params) {
   if (!params.nombre || !params.comentario) {
-    return Promise.reject({error: 'no name or comment'});
+    return Promise.reject({error: 'no hay nombre o comentario'});
   }
 
 	return {
