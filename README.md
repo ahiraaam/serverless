@@ -124,7 +124,7 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 		   correo: row.doc.correo,
 		   comentario: row.doc.comentario,
 		   createdAt: row.doc.createdAt,
-		   icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.comentario.trim().toLowerCase())}?s=64` : null)
+		   icon: (row.doc.correo ? `https://secure.gravatar.com/avatar/${md5.hash(row.doc.correo.trim().toLowerCase())}?s=64` : null)
 		  }})
 		 };
 		}
