@@ -164,3 +164,4 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 [url-IBMCLOUD]: https://cloud.ibm.com/registration
 [url-CLI-IBMCLOUD]: https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli
 [url-github-join]: https://github.com/join
+[img-ibmcloud-powered]: https://img.shields.io/badge/IBM%20cloud-powered-blue.svg
