@@ -4,6 +4,13 @@ Creará una aplicación web sin servidor alojando contenido de sitio web estáti
 
 En lugar de suministrar una máquina virtual, un contenedor o un entorno de ejecución de Cloud Foundry para desplegar el programa de fondo, puede implementar la API de programa de fondo con una plataforma sin servidor. Esta puede ser una buena solución para evitar pagar por el tiempo de desocupación y dejar la plataforma se escale cuando sea necesario.
 
+# Functions de IBM Cloud 
+[Functions](#Functions)
+Plataforma de IBM cloud de programacion poliglota FaaS (Functions-as-a-Service) para desarrollo de codigo ligero que escala dependiendo de la demanda.
+
+GitHub de Serverless para desplegar con githubpages: [![Serverless][img-cloud-serverless]][url-githubserverless]
+
+Para mayor informacion: [![Functions][img-cloud-functions]][url-ibmcloud-Functions]
 
 ## IBM Developer Advocates Team
 
@@ -20,9 +27,9 @@ Agenda
 
 
 ## Prework:
-* Cuenta de IBM Cloud (https://cloud.ibm.com/registration)
-* Instalar cli de IBM Cloud https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli 
-* Cuenta en github https://github.com/join
+* Cuenta de [IBM Cloud][url-IBMCLOUD]
+* Instalar [CLI de IBM Cloud][url-CLI-IBMCLOUD] 
+* Cuenta en [GitHub][url-github-join]
 * Utilizar safari, chrome, firefox, edge
 
 ### Cupones para Estudiantes y profesores
@@ -83,7 +90,7 @@ En esta sección configuraremos nuestro servicio de Functions.
  	13.	Seleccionamos la acción create-document, damos click en New Binding, ponemos de nombre de nuestro paquete binding-for-guestbook y en Cloudant Instance seleccionamos Input Your Own Credentials
  	14.	 Para llenar todos los datos posteriores copiamos lo que teníamos en el servicio de Cloudant como credenciales y damos click en Add:
  	15.	Para probar que esté funcionando, damos click en change input e ingresamos nuestro siguiente JSON y damos click en Apply y luego en Invoke
-	 ```json
+	 ``` json
 		{
 		"nombre": "John Smith",
 		"correo": "john@smith.com",
@@ -96,7 +103,7 @@ En esta sección configuraremos nuestro servicio de Functions.
 Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respectivos comentarios
 	1.	En nuestra tab de functions creamos una acción Node.js y le ponemos el nombre set-read-input, siguiendo el mismo proceso que en la acción anterior
 	2.	Reemplazamos el código que viene, esta acción pasa los parámetros apropiados a nuestra siguiente acción
-		```js
+		``` js
 		function main(params) {
 		 return {
 		  params: {
@@ -114,7 +121,7 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
  	9.	Damos click en Add para añadir una acción más a la secuencia, esta es la que va a dar el formato de los documentos cuando regresen de Cloudant
 	10.	La nombraremos format-entries y posteriormente damos click en Create and add 
 	11.	Damos click en format-entries y reemplazamos el código con:
-		```JS
+		``` js
 		const md5 = require('spark-md5');
 			
 		function main(params) {
@@ -152,3 +159,13 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 4.	En el área de Settings>Github Pages, seleccionamos master branch /docs folder
  
 5.	Podemos entrar a nuestra página en el link que aparece
+
+
+
+[img-cloud-serverless]: https://img.shields.io/badge/IBM%20cloud-Serverless-green.svg
+[url-githubserverless]: https://github.com/ibmdevelopermx/Serverless_Cloudant
+[img-cloud-functions]: https://img.shields.io/badge/IBM%20cloud-Functions-red.svg
+[url-ibmcloud-Functions]: https://www.ibm.com/cloud/functions
+[url-IBMCLOUD]: https://cloud.ibm.com/registration
+[url-CLI-IBMCLOUD]: https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli
+[url-github-join]: https://github.com/join
