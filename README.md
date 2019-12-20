@@ -1,14 +1,12 @@
 # Aplicación web y API sin servidor
+[![IBM Cloud powered][img-ibmcloud-powered]][url-ibmcloud]
 
 Creará una aplicación web sin servidor alojando contenido de sitio web estático en GitHub Pages e implementando el programa de fondo de la aplicación mediante IBM Cloud™ Functions.
 
 En lugar de suministrar una máquina virtual, un contenedor o un entorno de ejecución de Cloud Foundry para desplegar el programa de fondo, puede implementar la API de programa de fondo con una plataforma sin servidor. Esta puede ser una buena solución para evitar pagar por el tiempo de desocupación y dejar la plataforma se escale cuando sea necesario.
 
-# Functions de IBM Cloud 
-[Functions](#Functions)
+# Functions de IBM Cloud
 Plataforma de IBM cloud de programacion poliglota FaaS (Functions-as-a-Service) para desarrollo de codigo ligero que escala dependiendo de la demanda.
-
-GitHub de Serverless para desplegar con githubpages: [![Serverless][img-cloud-serverless]][url-githubserverless]
 
 Para mayor informacion: [![Functions][img-cloud-functions]][url-ibmcloud-Functions]
 
@@ -160,10 +158,7 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
  
 5.	Podemos entrar a nuestra página en el link que aparece
 
-
-
-[img-cloud-serverless]: https://img.shields.io/badge/IBM%20cloud-Serverless-green.svg
-[url-githubserverless]: https://github.com/ibmdevelopermx/Serverless_Cloudant
+[url-ibmcloud]: https://www.ibm.com/cloud/
 [img-cloud-functions]: https://img.shields.io/badge/IBM%20cloud-Functions-red.svg
 [url-ibmcloud-Functions]: https://www.ibm.com/cloud/functions
 [url-IBMCLOUD]: https://cloud.ibm.com/registration
