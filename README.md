@@ -60,11 +60,14 @@ Agenda
 En esta sección configuraremos nuestro servicio de Functions.
 1. Secuencia de acciones para escribir a la base de datos
 	1. Vamos al catálogo y buscamos Cloud Functions
+	![](img/im1.png)
  	2. Una vez dentro seleccionamos Actions
+	![](img/im2.png) 
 	3. Damos click en Create
-	5. Damos click en Create action
-	6. Ponemos el nombre prepare-entry-for-save y seleccionamos Node.js 6 como el Runtime, damos click en Create
-	7. Cambiamos el código por el siguiente:
+	![](img/im3.png)
+	5. Ponemos el nombre prepare-entry-for-save y seleccionamos Node.js 10 como el Runtime, damos click en Create
+	![](img/im4.png)
+	6. Cambiamos el código por el siguiente:
 		``` js
 		function main(params) {
 		 if (!params.nombre || !params.comentario) {
@@ -80,14 +83,15 @@ En esta sección configuraremos nuestro servicio de Functions.
 		 };
 	 	}
 		```
-	8. Lo salvamos
-	9. Para añadir nuestra acción a una secuencia primero nos vamos al tab “Enclosing Secuences” y damos click en “Add to Sequence”
- 	10.	Para el nombre de la secuencia ponemos save-guestbook-entry-sequence y posteriormente damos click en Create and Add
-	11.	Una vez que esta creada nuestra secuencia le damos click y damos click en Add posteriormente
- 	12.	Damos click en Use Public y seleccionamos Cloudant
- 	13.	Seleccionamos la acción create-document, damos click en New Binding, ponemos de nombre de nuestro paquete binding-for-guestbook y en Cloudant Instance seleccionamos Input Your Own Credentials
- 	14.	 Para llenar todos los datos posteriores copiamos lo que teníamos en el servicio de Cloudant como credenciales y damos click en Add:
- 	15.	Para probar que esté funcionando, damos click en change input e ingresamos nuestro siguiente JSON y damos click en Apply y luego en Invoke
+	7. Lo salvamos
+	![](img/im5.png)
+	8. Para añadir nuestra acción a una secuencia primero nos vamos al tab “Enclosing Secuences” y damos click en “Add to Sequence”
+ 	9.	Para el nombre de la secuencia ponemos save-guestbook-entry-sequence y posteriormente damos click en Create and Add
+	10.	Una vez que esta creada nuestra secuencia le damos click y damos click en Add posteriormente
+ 	11.	Damos click en Use Public y seleccionamos Cloudant
+ 	12.	Seleccionamos la acción create-document, damos click en New Binding, ponemos de nombre de nuestro paquete binding-for-guestbook y en Cloudant Instance seleccionamos Input Your Own Credentials
+ 	13.	 Para llenar todos los datos posteriores copiamos lo que teníamos en el servicio de Cloudant como credenciales y damos click en Add:
+ 	14.	Para probar que esté funcionando, damos click en change input e ingresamos nuestro siguiente JSON y damos click en Apply y luego en Invoke
 	 ``` json
 		{
 		"nombre": "John Smith",
