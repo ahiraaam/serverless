@@ -57,7 +57,7 @@ Agenda
 ![](img/imc6.png)
 5.Volvemos a la tab de "Manage" y le damos click en “Launch cloudant dashboard”.
 ![](img/imc4.png)
-6.Nos vamos a la 3er tab de lado izquierdo, damos click en Create Database y la nombramos guestbook.
+6.Nos vamos a la tab de lado izquierdo, damos click en "Create Database" y la nombramos "guestbook".
  ![](img/imc7.png)
 
 ## Configuración de Functions
@@ -135,13 +135,14 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 	4. Damos "Add to Sequence" y "Create New" con el nombre "read-guestbook-entries-sequence", y damos click en "Create and Add".
 	![](img/im20.png)
 	5. Damos click en el nombre de la secuencia "read-guestbook-entries-sequence".
- 	6. Damos click en "Add" para crear una segunda acción en la secuencia
-	7. Seleccionamos "Public" y "Cloudant"
- 	8.	Seleccionamos "list-documents" en actions y seleccionamos el binding "binding-for-guestbook" y posteriormente damos click en "Add"
+ 	6. Damos click en "Add" para crear una segunda acción en la secuencia.
+	7. Seleccionamos "Public" y "Cloudant".
+ 	8.	Seleccionamos "list-documents" en actions y seleccionamos el binding "binding-for-guestbook" y posteriormente damos click en "Add".
 	![](img/im21.png)
- 	9.	Damos click en Add para añadir una acción más a la secuencia, esta es la que va a dar el formato de los documentos cuando regresen de Cloudant
-	10.	La nombraremos format-entries y posteriormente damos click en Create and add 
-	11.	Damos click en format-entries y reemplazamos el código con:
+ 	9.	Damos click en "Save" y luego en "Add" para añadir una acción más a la secuencia, esta es la que va a dar el formato de los documentos cuando regresen de Cloudant.
+	10.	La nombraremos "format-entries" y posteriormente damos click en "Create and add"
+	![](img/im22.png) 
+	11.	Damos click en "Save" y luego en nuestra accion "format-entries" y reemplazamos el código con:
 		``` js
 		const md5 = require('spark-md5');
 			
@@ -157,16 +158,21 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 		 };
 		}
 		```
-	12.	Salvamos y damos click en invoke
+	12.	Salvamos y regresamos a nuestra secuencia para correrla con "invoke" (Esto lo podemos hacer dando click en acciones, y luego en nuestra secuencia, o en "Enclosing Sequence" y luego en nuestra secuencia)
+	![](img/im23.png)
+	![](img/im24.png)
  
 ## Configurar el API
-1.	Dentro de nuestras acciones seleccionamos nuestras secuencias y en la tab de Endpoints damos click en Enable Web Action y damos click en Save
- 
-2.	Nos vamos a Functions y damos click en APIs
- 
-3.	Damos click en Create Managed API
-4.	En el API name ponemos guestbook y en el path ponemos /guestbook y damos click en create operation
- 
+1.	Dentro de nuestras acciones seleccionamos ambas secuencias y en la tab de "Endpoints" damos click en "Enable Web Action" y damos click en "Save". **Es importante que se haga para cada secuencia**.
+![](img/im25.png)
+![](img/im26.png)
+Y nos quede de la siguiente manera:
+![](img/im27.png)
+2.	Nos vamos a el tag "APIs" que esta de lado derecho.
+3.	Damos click en "Create API"
+![](img/im28.png)
+4.	En el "API name *" ponemos "guestbook" y en el "Base path for API *" ponemos "/guestbook" y damos click en "create operation"
+![](img/im29.png) 
 5.	Creamos un path que sea /entries ponemos el verbo a GET y seleccionamos la secuencia read-guestbook-entries-sequence y damos click en Create
  
 6.	Realizamos la misma acción pero ahora con un POST y la secuencia save-guestbook-entries-sequence y damos click en Create
