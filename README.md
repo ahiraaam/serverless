@@ -169,23 +169,38 @@ Esta secuencia la usaremos para tomar las entradas de cada usuario y sus respect
 Y nos quede de la siguiente manera:
 ![](img/im27.png)
 2.	Nos vamos a el tag "APIs" que esta de lado derecho.
-3.	Damos click en "Create API"
+3.	Damos click en "Create API".
 ![](img/im28.png)
-4.	En el "API name *" ponemos "guestbook" y en el "Base path for API *" ponemos "/guestbook" y damos click en "create operation"
+4.	En el "API name *" ponemos "guestbook" y en el "Base path for API *" ponemos "/guestbook" y damos click en "create operation".
 ![](img/im29.png) 
-5.	Creamos un path que sea /entries ponemos el verbo a GET y seleccionamos la secuencia read-guestbook-entries-sequence y damos click en Create
- 
-6.	Realizamos la misma acción pero ahora con un POST y la secuencia save-guestbook-entries-sequence y damos click en Create
-7.	Salvamos y exponemos la API
+5.	Creamos un "Path *" que sea "/entries" ponemos el verbo a "GET" y seleccionamos la secuencia "read-guestbook-entries-sequence" y damos click en "Create".
+![](img/im30.png)
+6.	Realizamos la misma acción pero ahora con un "POST" y la secuencia "save-guestbook-entries-sequence" y damos click en "Create".
+![](img/im31.png)
+7.	Nos dirigimos hasta abajo y damos click en "Create" para exponer la API.
+![](img/im32.png)
  
 ## Despliegue
-1.	Clonamos este repositorio en alguna carpeta de facil acceso
-2.	Modificamos el docs/guestbook.js y reemplazamos el valor de apiUrl con la ruta dada por API Gateway, que obtenemos al dar click en APIs
- 
-3.	Hacemos push de esto a un nuevo repositorio
-4.	En el área de Settings>Github Pages, seleccionamos master branch /docs folder
- 
-5.	Podemos entrar a nuestra página en el link que aparece
+1.	Forkeamos y despues clonamos este repositorio en alguna carpeta de facil acceso.
+![](img/im33.png)
+``` bash
+git clone <url de tu nuevo repositorio>
+```
+2.	Modificamos el "docs/guestbook.js" y reemplazamos el valor de "apiUrl" en la linea 6 con la ruta dada por el "API Gateway", que obtenemos al dar click en nuesta API.
+![](img/im34.png)
+![](img/im35.png)
+3.	Guardamos el archivo modificado y hacemos "push" de esto al repositorio que habiamos clonado.
+``` bash
+git add .
+git commit -m "nuevo commit"
+git push
+```
+4.	En el área de Settings>Github Pages, seleccionamos "master branch/docs folder.
+![](img/im36.png)
+![](img/im37.png)
+5.	Y podemos entrar a nuestra página en el link que aparece ya que nos diga que el sitio esta publicado.
+![](img/im38.png)
+![](img/im39.png)
 
 [url-ibmcloud]: https://www.ibm.com/cloud/
 [img-cloud-functions]: https://img.shields.io/badge/IBM%20cloud-Functions-red.svg

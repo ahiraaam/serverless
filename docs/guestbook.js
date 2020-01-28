@@ -3,7 +3,7 @@
  * aplicacion serverless natural...
  * pagina guestbook
  */
-const apiUrl = 'https://2166d93d.us-east.apiconnect.appdomain.cloud/7fdb8107-a76d-4275-830d-019450118c56/teacherAdvocates';
+const apiUrl = '<URL de API>';
 const guestbook = {
   // retrieve the existing guestbook entries
   get() {
