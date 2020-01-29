@@ -57,8 +57,7 @@ Agenda
 ![](img/imc3.png)
 <br>
 4.Ya que el servicio este desplegado y listo para usar, en el tab de “Service Credentials” buscarmo si ya tenemos alguna creada, si no es asi, generamos una nueva credencial, que usaremos más adelante.<br>
-![](img/imc5.png)
-<br>
+![](img/imc5.png)<br>
 ![](img/imc6.png)<br>
 5.Volvemos a la tab de "Manage" y le damos click en “Launch cloudant dashboard”.<br>
 ![](img/imc4.png)<br>
