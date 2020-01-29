@@ -28,6 +28,7 @@ Agenda
 * Cuenta de [IBM Cloud][url-IBMCLOUD]
 * Instalar [CLI de IBM Cloud][url-CLI-IBMCLOUD] 
 * Cuenta en [GitHub][url-github-join]
+* Instalar [CLI de GitHub][url-github-cli] o instalar [GitHub Desktop][url-githubdesktop]
 * Utilizar safari, chrome, firefox, edge
 
 ### Cupones para Estudiantes y profesores
@@ -208,4 +209,6 @@ git push
 [url-IBMCLOUD]: https://cloud.ibm.com/registration
 [url-CLI-IBMCLOUD]: https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli
 [url-github-join]: https://github.com/join
+[url-github-cli]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[url-githubdesktop]: https://desktop.github.com/
 [img-ibmcloud-powered]: https://img.shields.io/badge/IBM%20cloud-powered-blue.svg
